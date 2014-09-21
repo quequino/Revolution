@@ -271,7 +271,7 @@
 
 <addon
   id="skin.total.revolution"
-  version="0.2"
+  version="0.2.1"
   name="Total Revolution"
   provider-name="Jezz_X, Team XBMC, whufclee">
   <requires>

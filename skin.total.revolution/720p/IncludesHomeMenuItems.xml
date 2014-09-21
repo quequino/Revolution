@@ -514,6 +514,7 @@
 			<icon>chrome.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoChromeButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 		<item>
 			<label>31970</label>
@@ -521,6 +522,7 @@
 			<icon>facebook.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoFacebookButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 		<item>
 			<label>31979</label>
@@ -528,6 +530,7 @@
 			<icon>twitter.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoTwitterButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 		<item>
 			<label>31971</label>
@@ -535,6 +538,7 @@
 			<icon>skype.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoSkypeButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 		<item>
 			<label>31972</label>
@@ -542,6 +546,7 @@
 			<icon>email.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoEmailButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 		<item>
 			<label>31973</label>
@@ -549,6 +554,7 @@
 			<icon>gmail.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoGmailButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 		</include>
 </includes>
