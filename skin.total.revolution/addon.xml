@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin.total.revolution"
+  version="0.1"
+  name="Total Revolution"
+  provider-name="Jezz_X, Team XBMC, whufclee">
+  <requires>
+    <import addon="xbmc.gui" version="5.0.0"/>
+    <import addon="plugin.totalsettings"/>
+    <import addon="plugin.program.totalinstaller"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultthemename="textures.xbt"
+    debugging="false"
+    effectslowdown="0.75">
+    <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Based on the original Confluence by Jezz_X</summary>
+    <description>Total Revolution is a skin designed for android integration, ease of use and isn't too heavy on your system resources as it's based on Confluence. Whilst this was originally designed with Android in mind it is fully functional on all other platforms.</description>
+    <platform>all</platform>
+  </extension>
+</addon>

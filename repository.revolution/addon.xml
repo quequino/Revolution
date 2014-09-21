@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.revolution" version="1.0" name="Revolution Repository" provider-name="whufclee">
+	<extension point="xbmc.addon.repository" name="Revolution Repository">
+		<info compressed="false">https://github.com/totalinstall/Revolution/raw/master/addons.xml</info>
+		<checksum>https://github.com/totalinstall/Revolution/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/totalinstall/Revolution/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Revolution Repository</summary>
+		<description>Home of the Total Revolution skin brought to you by TotalXBMC. The website and forum where everyone is welcome with no censorship or politics.</description>
+		<platform>all</platform>
+	</extension>
+</addon>

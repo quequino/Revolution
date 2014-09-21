@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="HomeSubMenuVideos">
+		<control type="image" id="90101">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90102">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>342</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<visible>Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+		</control>
+		<control type="button" id="90103">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20343</label>
+			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
+			<visible>Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+		</control>
+		<control type="button" id="90104">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20389</label>
+			<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+			<visible>Library.HasContent(MusicVideos)</visible>
+		</control>
+		<control type="button" id="90105">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>744</label>
+			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+		</control>
+		<control type="button" id="90106">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>14022</label>
+			<onclick>ActivateWindow(Videos,Root)</onclick>
+			<visible>Library.HasContent(Video)</visible>
+		</control>
+		<control type="button" id="90107">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+		</control>
+		<control type="image" id="90108">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuMovies">
+		<control type="image" id="90161">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90162">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+		</control>
+		<control type="button" id="90163">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20434</label>
+			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+			<visible>Library.HasContent(MovieSets)</visible>
+		</control>
+		<control type="button" id="90164">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>369</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+		</control>
+		<control type="button" id="90165">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,MovieGenres,return)</onclick>
+		</control>
+		<control type="button" id="90166">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>652</label>
+			<onclick>ActivateWindow(Videos,MovieYears,return)</onclick>
+		</control>
+		<control type="button" id="90167">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>344</label>
+			<onclick>ActivateWindow(Videos,MovieActors,return)</onclick>
+		</control>
+		<control type="image" id="90168">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuTVShows">
+		<control type="image" id="90171">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90172">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
+		</control>
+		<control type="button" id="90173">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>369</label>
+			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+		</control>
+		<control type="button" id="90174">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,TVShowGenres,return)</onclick>
+		</control>
+		<control type="button" id="90175">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>652</label>
+			<onclick>ActivateWindow(Videos,TVShowYears,return)</onclick>
+		</control>
+		<control type="button" id="90176">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>344</label>
+			<onclick>ActivateWindow(Videos,TVShowActors,return)</onclick>
+		</control>
+		<control type="image" id="90177">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuMusic">
+		<control type="image" id="90111">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90112">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>133</label>
+			<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90113">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>132</label>
+			<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90114">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>134</label>
+			<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90115">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>744</label>
+			<onclick>ActivateWindow(MusicFiles)</onclick>
+		</control>
+		<control type="button" id="90116">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>14022</label>
+			<onclick>ActivateWindow(MusicLibrary,root)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90117">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90118">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
+			<visible>!Library.HasContent(Music)</visible>
+		</control>
+		<control type="image" id="90119">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuSystem">
+		<control type="image" id="90121">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90122">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31965</label>
+			<onclick>RunAddon(plugin.totalsettings)</onclick>
+		</control>
+		<control type="button" id="90123">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>7</label>
+			<onclick>ActivateWindow(FileManager)</onclick>
+		</control>
+		<control type="button" id="90124">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13200</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+		</control>
+		<control type="button" id="90125">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>130</label>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+		</control>
+		<control type="image" id="90126">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuPlayDisc">
+		<control type="image" id="90131">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90132">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13391</label>
+			<onclick>SetFocus(9000)</onclick>
+			<onclick>EjectTray()</onclick>
+		</control>
+		<control type="image" id="90126">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuPictures">
+		<control type="image" id="90147">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90148">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+		</control>
+		<control type="image" id="90149">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuLiveTV">
+		<control type="image" id="90141">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90142">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19023</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90143">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19024</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 33,0, 12,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90144">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19069</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90145">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19163</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 34,0, 13,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="button" id="90146">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19040</label>
+			<onclick>ActivateWindowAndFocus(MyPVR, 35,0, 14,0)</onclick>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+		<control type="image" id="90147">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+			<visible>System.GetBool(pvrmanager.enabled)</visible>
+		</control>
+	</include>
+	<include name="HomeSubMenuAndroid">
+		<control type="image" id="90150">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90151">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31964</label>
+			<onclick>StartAndroidActivity(&quot;com.android.vending&quot;)</onclick>
+		</control>
+		<control type="image" id="90152">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeAddonItemsFavourites">
+		<item>
+			<label>Anime</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Anime")</onclick>
+			<icon>FavesAnime.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoAnimeFaves)</visible>
+		</item>
+		<item>
+			<label>Audiobooks</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Audiobooks")</onclick>
+			<icon>FavesAudiobooks.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoAudiobooksFaves)</visible>
+		</item>
+		<item>
+			<label>Comics</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Comics")</onclick>
+			<icon>FavesComics.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoComicsFaves)</visible>
+		</item>
+		<item>
+			<label>Documentary</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Documentary")</onclick>
+			<icon>FavesDocumentary.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoDocumentaryFaves)</visible>
+		</item>
+		<item>
+			<label>Food</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Food")</onclick>
+			<icon>FavesFood.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoFoodFaves)</visible>
+		</item>
+		<item>
+			<label>Gaming</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Gaming")</onclick>
+			<icon>FavesGaming.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoGamingFaves)</visible>
+		</item>
+		<item>
+			<label>How To</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=How%20To")</onclick>
+			<icon>FavesHowTo.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoHowToFaves)</visible>
+		</item>
+		<item>
+			<label>Kids</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Kids")</onclick>
+			<icon>FavesKids.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoKidsFaves)</visible>
+		</item>
+		<item>
+			<label>Live TV</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Live%20TV")</onclick>
+			<icon>FavesLiveTV.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoLiveTVFaves)</visible>
+		</item>
+		<item>
+			<label>Movies</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Movies")</onclick>
+			<icon>FavesMovies.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoMoviesFaves)</visible>
+		</item>
+		<item>
+			<label>Music</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Music")</onclick>
+			<icon>FavesMusic.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoMusicFaves)</visible>
+		</item>
+		<item>
+			<label>News And Weather</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=News%20And%20Weather")</onclick>
+			<icon>FavesNewsAndWeather.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoNewsAndWeatherFaves)</visible>
+		</item>
+		<item>
+			<label>Photos</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Photos")</onclick>
+			<icon>FavesPhotos.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoPhotosFaves)</visible>
+		</item>
+		<item>
+			<label>Podcasts</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Podcasts")</onclick>
+			<icon>FavesPodcasts.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoPodcastsFaves)</visible>
+		</item>
+		<item>
+			<label>Programs</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Programs")</onclick>
+			<icon>FavesPrograms.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoProgramsFaves)</visible>
+		</item>
+		<item>
+			<label>Radio</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Radio")</onclick>
+			<icon>FavesRadio.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoRadioFaves)</visible>
+		</item>
+		<item>
+			<label>Religion</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Religion")</onclick>
+			<icon>FavesReligion.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoReligionFaves)</visible>
+		</item>
+		<item>
+			<label>Sports</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Sports")</onclick>
+			<icon>FavesSports.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoSportsFaves)</visible>
+		</item>
+		<item>
+			<label>Tech</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Tech")</onclick>
+			<icon>FavesTech.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoTechFaves)</visible>
+		</item>
+		<item>
+			<label>Trailers</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=Trailers")</onclick>
+			<icon>FavesTrailers.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoTrailersFaves)</visible>
+		</item>
+		<item>
+			<label>TV Shows</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=TV%20Shows")</onclick>
+			<icon>FavesTV.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoTVFaves)</visible>
+		</item>
+		<item>
+			<label>XXX</label>
+			<onclick>ActivateWindow(10025,"plugin://plugin.program.super.favourites/?folder=XXX")</onclick>
+			<icon>FavesAdult.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoAdultFaves)</visible>
+		</item>
+	</include>
+	<include name="HomeAddonItemsVideos">
+		<item>
+			<label>31974</label>
+			<onclick>StartAndroidActivity(&quot;com.netflix.mediaclient&quot;)</onclick>
+			<icon>netflix.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoNetflixButton)</visible>
+		</item>
+		<item>
+			<label>31978</label>
+			<onclick>StartAndroidActivity(&quot;com.google.android.youtube&quot;)</onclick>
+			<icon>youtube.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoYoutubeButton)</visible>
+		</item>
+	</include>
+	<include name="HomeAddonItemsMusic">
+		<item>
+			<label>31975</label>
+			<onclick>StartAndroidActivity(&quot;com.spotify.mobile.android.ui&quot;)</onclick>
+			<icon>spotify.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoSpotifyButton)</visible>
+		</item>
+		<item>
+			<label>31976</label>
+			<onclick>StartAndroidActivity(&quot;tunein.player&quot;)</onclick>
+			<icon>tunein.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoTuneInButton)</visible>
+		</item>
+		<item>
+			<label>31977</label>
+			<onclick>StartAndroidActivity(&quot;com.vevo&quot;)</onclick>
+			<icon>vevo.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoVevoButton)</visible>
+		</item>
+	</include>
+	<include name="HomeAddonItemsAndroid">
+		<item>
+			<label>31969</label>
+			<onclick>StartAndroidActivity(&quot;com.android.chrome&quot;)</onclick>
+			<icon>chrome.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoChromeButton)</visible>
+		</item>
+		<item>
+			<label>31970</label>
+			<onclick>StartAndroidActivity(&quot;com.facebook.katana&quot;)</onclick>
+			<icon>facebook.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoFacebookButton)</visible>
+		</item>
+		<item>
+			<label>31979</label>
+			<onclick>StartAndroidActivity(&quot;com.twitter.android&quot;)</onclick>
+			<icon>twitter.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoTwitterButton)</visible>
+		</item>
+		<item>
+			<label>31971</label>
+			<onclick>StartAndroidActivity(&quot;com.skype.raider&quot;)</onclick>
+			<icon>skype.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoSkypeButton)</visible>
+		</item>
+		<item>
+			<label>31972</label>
+			<onclick>StartAndroidActivity(&quot;com.android.email&quot;)</onclick>
+			<icon>email.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoEmailButton)</visible>
+		</item>
+		<item>
+			<label>31973</label>
+			<onclick>StartAndroidActivity(&quot;com.google.android.gm&quot;)</onclick>
+			<icon>gmail.png</icon>
+			<thumb>-</thumb>
+			<visible>!Skin.HasSetting(HomeMenuNoGmailButton)</visible>
+		</item>
+		</include>
+</includes>
+

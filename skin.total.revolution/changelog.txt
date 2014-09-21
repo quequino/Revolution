@@ -1,0 +1,14 @@
+20/09/2014: Fork of Confluence (Gotham) skin
+
+Added:
+
+Android section to home menu
+Android apps to home menu
+Extra skin settings
+Super Favourites added to home menu
+iSearch to home menu and rename "search" to Local Search
+New Backgrounds
+Android settings added in System
+
+Bugs:
+iSearch not working
