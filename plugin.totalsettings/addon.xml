@@ -6,6 +6,7 @@
     <import addon="plugin.program.vpnicity" version="1.0.2"/>
     <import addon="plugin.program.super.favourites" version="1.0.20"/>
     <import addon="script.tvguidedixie" version="2.3.2"/>
+    <import addon="script.forum.browser" version="2.1.0"/>
     <import addon="plugin.video.whufclee" version="1.0.5"/>
     <import addon="repository.spoyser" version="1.0.6"/>
     <import addon="repository.Dixie-Deans-XBMC-Repo" version="1.0.9"/>

@@ -187,7 +187,7 @@
 		</control>
 		<control type="button" id="90122">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>31965</label>
+			<label>Maintenance</label>
 			<onclick>RunAddon(plugin.totalsettings)</onclick>
 		</control>
 		<control type="button" id="90123">
@@ -470,6 +470,7 @@
 			<icon>netflix.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoNetflixButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 		<item>
 			<label>31978</label>
@@ -477,6 +478,7 @@
 			<icon>youtube.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoYoutubeButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 	</include>
 	<include name="HomeAddonItemsMusic">
@@ -486,6 +488,7 @@
 			<icon>spotify.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoSpotifyButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 		<item>
 			<label>31976</label>
@@ -493,6 +496,7 @@
 			<icon>tunein.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoTuneInButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 		<item>
 			<label>31977</label>
@@ -500,6 +504,7 @@
 			<icon>vevo.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoVevoButton)</visible>
+			<visible>condition="System.Platform.Android"</visible>
 		</item>
 	</include>
 	<include name="HomeAddonItemsAndroid">
