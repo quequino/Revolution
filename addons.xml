@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.program.super.favourites" name="Super Favourites" version="1.0.20" provider-name="spoyser">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.metahandler" version="2.7.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video audio executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Put all your favourites bits of all your favourites addons into one easy to use addon.</summary>
+    <description lang="en">Super Favourites is a better way of managing your Kodi Favourites.[CR][CR]Virtually any menu item within Kodi can be added to Super Favourites, even from addons that don't normally provide this feature.[CR][CR]Super Favourites allows you to better manage your Kodi favourites, including the creation of sub-folders, into which your Kodi favourites can then be copied or moved into.[CR][CR]This allows you to create you own custom addon with just the best bits of your favourite addons. Search your favourite addons, play your favourite music, read your favourite comic strips, select your favourite playlists, browse your favourite movies, listen to your favourite radio stations, watch your favourite cartoons, the possibilities are endless, all from within one easy to use addon.</description>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=192662</forum>
+    <website></website>
+    <source></source>
+    <email></email>
+  </extension>
+</addon>
+
 <addon id="plugin.program.totalinstaller" version="1.0.6" name="Total Installer" provider-name="spoyser, whufclee, blazetamer (original code)">
 <requires>
 <import addon="xbmc.python" version="2.1.0"/>
@@ -41,14 +63,14 @@
 <addon id="plugin.totalsettings" name="TotalXBMC Maintenance" version="1.0.0" provider-name="whufclee">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.program.totalinstaller"/>
-    <import addon="plugin.program.vpnicity"/>
-    <import addon="plugin.program.super.favourites"/>
-    <import addon="script.tvguidedixie"/>
-    <import addon="plugin.video.whufclee"/>
-    <import addon="repository.spoyser"/>
-    <import addon="repository.Dixie-Deans-XBMC-Repo"/>
-    <import addon="script.games.rom.collection.browser"/>
+    <import addon="plugin.program.totalinstaller" version="1.0.6"/>
+    <import addon="plugin.program.vpnicity" version="1.0.2"/>
+    <import addon="plugin.program.super.favourites" version="1.0.20"/>
+    <import addon="script.tvguidedixie" version="2.3.2"/>
+    <import addon="plugin.video.whufclee" version="1.0.5"/>
+    <import addon="repository.spoyser" version="1.0.6"/>
+    <import addon="repository.Dixie-Deans-XBMC-Repo" version="1.0.9"/>
+    <import addon="script.games.rom.collection.browser" version="2.0.17"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>executable</provides>
@@ -219,8 +241,7 @@
   provider-name="Jezz_X, Team XBMC, whufclee">
   <requires>
     <import addon="xbmc.gui" version="5.0.0"/>
-    <import addon="plugin.totalsettings"/>
-    <import addon="plugin.program.totalinstaller"/>
+    <import addon="plugin.totalsettings" version="1.0.0"/>
   </requires>
   <extension
     point="xbmc.gui.skin"

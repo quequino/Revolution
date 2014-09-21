@@ -6,8 +6,7 @@
   provider-name="Jezz_X, Team XBMC, whufclee">
   <requires>
     <import addon="xbmc.gui" version="5.0.0"/>
-    <import addon="plugin.totalsettings"/>
-    <import addon="plugin.program.totalinstaller"/>
+    <import addon="plugin.totalsettings" version="1.0.0"/>
   </requires>
   <extension
     point="xbmc.gui.skin"
