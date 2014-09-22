@@ -185,7 +185,7 @@
 						<onclick>noop</onclick>
 					</item>
 					<item id="4">
-						<visible>condition="System.Platform.Android"</visible>
+						<visible>System.Platform.Android</visible>
 						<label>31963</label>
 						<label2>31200</label2>
 						<onclick>noop</onclick>

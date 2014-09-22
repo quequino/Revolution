@@ -1047,7 +1047,7 @@
 						<onclick>ReplaceWindow(10001,&quot;androidapp://sources/apps/&quot;,return)</onclick>
 						<icon></icon>
 						<thumb>-</thumb>
-						<visible>condition="System.Platform.Android"</visible>
+						<visible>System.Platform.Android</visible>
 						<visible>!Skin.HasSetting(HomeMenuNoAndroidButton)</visible>
 					</item>
 					<item id="2">

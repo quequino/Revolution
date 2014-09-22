@@ -117,7 +117,7 @@
 				</focusedlayout>
 				<content>
 					<item id="10">
-						<visible>condition="System.Platform.Android"</visible>
+						<visible>System.Platform.Android</visible>
 						<label>31962</label>
 						<label2>31407</label2>
 						<onclick>StartAndroidActivity(&quot;com.android.settings&quot;)</onclick>
