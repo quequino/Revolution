@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.total.revolution"
-  version="0.2.2"
+  version="0.2.3"
   name="Total Revolution"
   provider-name="Jezz_X, Team XBMC, whufclee">
   <requires>
@@ -18,7 +18,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>A mod on the original Confluence by Jezz_X</summary>
-    <description>Total Revolution is a skin designed for absolute ease of use and a will hopefully serve as a base for community development. Features never seen integrated into skins before this also has the ability to integrate android apps into XBMC/Kodi. Whilst this was originally designed with Android in mind it has grown and is fully functional on all other platforms.</description>
+    <description>Total Revolution is a skin designed for absolute ease of use and to serve as a base for community development. Full integration is the key, with some features never seen integrated into a skin before - this also has the ability to integrate android apps into XBMC/Kodi. Whilst this was originally designed with Android in mind it has grown and is fully functional on all other platforms.</description>
     <platform>all</platform>
   </extension>
 </addon>

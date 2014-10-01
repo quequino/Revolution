@@ -8,9 +8,9 @@
 		<include>CommonBackground</include>
 		<control type="image">
 			<left>0</left>
-			<top>90r</top>
+			<top>45r</top>
 			<width>1280</width>
-			<height>90</height>
+			<height>45</height>
 			<texture>floor.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
@@ -27,93 +27,197 @@
 			<include>Window_OpenClose_Animation</include>
 			<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom Video Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomVideosPath)]</texture>
+			<visible>Container(9000).HasFocus(2) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Video Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>VideoIcon.png</texture>
-			<visible>Container(9000).HasFocus(2) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(2) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom Programs Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomProgramsPath)]</texture>
+			<visible>Container(9000).HasFocus(1) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Programs Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>ProgramsIcon.png</texture>
-			<visible>Container(9000).HasFocus(1) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(1) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom Pictures Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomPicturesPath)]</texture>
+			<visible>Container(9000).HasFocus(4) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Pictures Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>PicturesIcon.png</texture>
-			<visible>Container(9000).HasFocus(4) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(4) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom Pictures Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomMusicPath)]</texture>
+			<visible>Container(9000).HasFocus(3) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Music Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>MusicIcon.png</texture>
-			<visible>Container(9000).HasFocus(3) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(3) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom System Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomSettingsPath)]</texture>
+			<visible>Container(9000).HasFocus(5) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default System Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>SystemIcon.png</texture>
-			<visible>Container(9000).HasFocus(5) + !Skin.HasSetting(HomeMenuNoicons)</visible>
+			<visible>Container(9000).HasFocus(5) + !Skin.HasSetting(HomeMenuNoicons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom Weather Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomWeatherPath)]</texture>
+			<visible>Container(9000).HasFocus(7) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Weather Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>WeatherIcon.png</texture>
-			<visible>Container(9000).HasFocus(7) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(7) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom Favourites Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomFavouritesPath)]</texture>
+			<visible>Container(9000).HasFocus(8) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Favourites Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>SuperFavouritesIcon.png</texture>
-			<visible>Container(9000).HasFocus(8) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(8) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom Movies Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomMoviesPath)]</texture>
+			<visible>Container(9000).HasFocus(10) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Movies Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>MoviesIcon.png</texture>
-			<visible>Container(9000).HasFocus(10) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(10) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom TV Shows Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomTVShowsPath)]</texture>
+			<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default TV Shows Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>TVIcon.png</texture>
-			<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(11) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom Live TV Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomLiveTVPath)]</texture>
+			<visible>Container(9000).HasFocus(12) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Live TV Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>LiveTVIcon.png</texture>
-			<visible>Container(9000).HasFocus(12) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(12) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
-		<control type="image">
+		<control type="image"> <!--Custom Gaming Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomGamingPath)]</texture>
+			<visible>Container(9000).HasFocus(19) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Gaming Icon-->
 			<left>500</left>
 			<top>100</top>
 			<width>280</width>
 			<height>280</height>
 			<texture>GamingIcon.png</texture>
-			<visible>Container(9000).HasFocus(19) + !Skin.HasSetting(HomeMenuNoIcons)</visible>
+			<visible>Container(9000).HasFocus(19) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Custom Android Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>$INFO[Skin.String(CustomAndroidPath)]</texture>
+			<visible>Container(9000).HasFocus(20) + !Skin.HasSetting(HomeMenuNoIcons) + Skin.HasSetting(UseCustomIcons)</visible>
+		</control>
+		<control type="image"> <!--Default Android Icon-->
+			<left>500</left>
+			<top>100</top>
+			<width>280</width>
+			<height>280</height>
+			<texture>AndroidIcon.png</texture>
+			<visible>Container(9000).HasFocus(20) + !Skin.HasSetting(HomeMenuNoIcons) + !Skin.HasSetting(UseCustomIcons)</visible>
 		</control>
 
 		<!-- Music Info -->
@@ -868,6 +972,20 @@
 				<top>70</top>
 				<onup>9000</onup>
 				<ondown>9002</ondown>
+				<control type="grouplist" id="9004">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9004</onleft>
+					<onright>9004</onright>
+					<visible>Container(9000).HasFocus(1)</visible>
+					<include>HomeSubMenuPrograms</include> <!-- Buttons for the grouplist -->
+				</control>
+				<control type="grouplist" id="9005">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9005</onleft>
+					<onright>9005</onright>
+					<visible>Container(9000).HasFocus(20)</visible>
+					<include>HomeSubMenuAndroid</include> <!-- Buttons for the grouplist -->
+				</control>
 				<control type="grouplist" id="9010">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9010</onleft>
@@ -919,8 +1037,8 @@
 				</control>
 				<control type="grouplist" id="9015">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9013</onleft>
-					<onright>9013</onright>
+					<onleft>9015</onleft>
+					<onright>9015</onright>
 					<visible>Container(9000).HasFocus(4)</visible>
 					<include>HomeSubMenuPictures</include> <!-- Buttons for the grouplist -->
 				</control>
@@ -1096,8 +1214,7 @@
 					</item>
 					<item id="1">
 						<label>31957</label>
-						<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
-						<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
@@ -1230,7 +1347,7 @@
 			<control type="button" id="20">
 				<description>Power push button</description>
 				<left>55</left>
-				<top>0</top>
+				<top>10</top>
 				<width>45</width>
 				<height>45</height>
 				<label>31003</label>
@@ -1246,7 +1363,7 @@
 			<control type="image">
 				<description>Power Icon</description>
 				<left>60</left>
-				<top>5</top>
+				<top>15</top>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
@@ -1255,7 +1372,7 @@
 			<control type="button" id="21">
 				<description>Favourites push button</description>
 				<left>0</left>
-				<top>0</top>
+				<top>10</top>
 				<width>45</width>
 				<height>45</height>
 				<label>1036</label>
@@ -1271,7 +1388,7 @@
 			<control type="image">
 				<description>Favourites Icon</description>
 				<left>5</left>
-				<top>5</top>
+				<top>15</top>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>

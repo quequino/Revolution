@@ -418,56 +418,6 @@
 					<onright>60</onright>
 					<onup>9002</onup>
 					<ondown>9002</ondown>
-					<control type="label" id="200">
-						<width>750</width>
-						<height>45</height>
-						<font>font13_title</font>
-						<label>31101</label>
-						<textcolor>blue</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="radiobutton" id="202">
-						<description>enable video info</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20176</label>
-						<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
-						<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="203">
-						<description>enable music info</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20083</label>
-						<onclick>Skin.ToggleSetting(homepageMusicinfo)</onclick>
-						<selected>!Skin.HasSetting(homepageMusicinfo)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="204">
-						<description>enable weather info</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20084</label>
-						<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
-						<selected>Skin.HasSetting(homepageWeatherinfo)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<visible>!IsEmpty(Weather.Plugin)</visible>
-					</control>
 <!--					<control type="radiobutton" id="205">
 						<description>Show Recently added Video info</description>
 						<width>750</width>
@@ -609,6 +559,7 @@
 						<selected>Skin.HasSetting(HomeMenuNoAndroidButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<visible>System.Platform.Android</visible>
 					</control>
 					<control type="radiobutton" id="230">
 						<description>Hide Super Favourites Button</description>
@@ -723,7 +674,7 @@
 						<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
 						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
 					</control>
-<!--					<control type="label" id="310">
+					<control type="label" id="310">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -757,7 +708,212 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
 						<enable>Skin.HasSetting(UseCustomBackground)</enable>
-					</control>-->
+					</control>
+					<control type="label" id="313">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>Overlay Home Icons</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="472">
+						<description>Enable Total Icons</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Enable Top Layer Icons</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoIcons)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuNoIcons)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="473">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Use Custom Icons</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(UseCustomIcons)</onclick>
+						<selected>Skin.HasSetting(UseCustomIcons)</selected>
+						<enable>!Skin.HasSetting(HomeMenuNoIcons)</enable>
+					</control>
+					<control type="button" id="474">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Favourites Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavouritesPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomFavouritesPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomFavourites)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="475">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Weather Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomWeatherPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomWeatherPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomWeather)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="476">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Pictures Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomPicturesPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomPicturesPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomPictures)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="477">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Videos Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomVideosPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomVideosPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomVideos)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="478">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom TV Shows Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomTVShowsPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomTVShowsPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomTVShows)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="479">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Movies Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomMoviesPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomMoviesPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomMovies)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="480">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom LiveTV Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomLiveTVPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomLiveTVPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomLiveTV)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="481">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Music Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomMusicPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomMusicPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomMusic)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="482">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Gaming Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomGamingPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomGamingPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomGaming)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="483">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Programs Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomProgramsPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomProgramsPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomPrograms)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="484">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Settings Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomSettingsPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomSettingsPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomSettings)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+					</control>
+					<control type="button" id="485">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Custom Android Icon</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomAndroidPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomAndroidPath)</onclick>
+						<selected>Skin.HasSetting(UseCustomAndroid)</selected>
+						<enable>Skin.HasSetting(UseCustomIcons)</enable>
+						<visible>System.Platform.Android</visible>
+					</control>
 				</control>
 				<control type="group">
 					<control type="grouplist" id="9004">
@@ -1265,30 +1421,67 @@
 							<aligny>center</aligny>
 						</control>
 							<control type="radiobutton" id="471">
-							<description>Enable/Disable TotalXBMC Theme (extra buttons on homepage)</description>
+							<description>Enable TotalXBMC Theme (extra buttons on homepage)</description>
 							<width>750</width>
 							<height>40</height>
 							<font>font13</font>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
-							<label>Enable/Disable TotalXBMC Buttons</label>
+							<label>Enable TotalXBMC Buttons</label>
 							<onclick>Skin.ToggleSetting(HomeMenuNoTotalXBMC)</onclick>
 							<selected>!Skin.HasSetting(HomeMenuNoTotalXBMC)</selected>
 							<texturefocus>MenuItemFO.png</texturefocus>
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 						</control>
-						<control type="radiobutton" id="472">
-							<description>Enable/Disable Skin Artwork</description>
+						<control type="label" id="200">
+							<width>750</width>
+							<height>45</height>
+							<font>font13_title</font>
+							<label>31101</label>
+							<textcolor>blue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="radiobutton" id="202">
+							<description>enable video info</description>
 							<width>750</width>
 							<height>40</height>
 							<font>font13</font>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
-							<label>Enable/Disable Skin Artwork</label>
-							<onclick>Skin.ToggleSetting(HomeMenuNoIcons)</onclick>
-							<selected>!Skin.HasSetting(HomeMenuNoIcons)</selected>
+							<label>20176</label>
+							<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
+							<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
 							<texturefocus>MenuItemFO.png</texturefocus>
 							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="radiobutton" id="203">
+							<description>enable music info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>20083</label>
+							<onclick>Skin.ToggleSetting(homepageMusicinfo)</onclick>
+							<selected>!Skin.HasSetting(homepageMusicinfo)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+						</control>
+						<control type="radiobutton" id="204">
+							<description>enable weather info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>20084</label>
+							<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
+							<selected>Skin.HasSetting(homepageWeatherinfo)</selected>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<visible>!IsEmpty(Weather.Plugin)</visible>
 						</control>
 					</control>
 				</control>

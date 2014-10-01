@@ -120,7 +120,7 @@
 						<visible>System.Platform.Android</visible>
 						<label>31962</label>
 						<label2>31407</label2>
-						<onclick>StartAndroidActivity(&quot;com.android.settings&quot;)</onclick>
+						<onclick>StartAndroidActivity(&quot;com.giec.settings&quot;)</onclick>
 						<icon>settings-android.png</icon>
 					</item>
 					<item id="9">

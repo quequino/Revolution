@@ -307,6 +307,35 @@
 			<texture border="0,0,0,3">HomeSubEnd.png</texture>
 		</control>
 	</include>
+	<include name="HomeSubMenuPrograms">
+		<control type="image" id="90155">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90156">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Android Apps</label>
+			<onclick>ReplaceWindow(10001,&quot;androidapp://sources/apps/&quot;,return)</onclick>
+			<visible>System.Platform.Android</visible>
+		</control>
+		<control type="button" id="90157">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Total Installer</label>
+			<onclick>RunAddon(plugin.program.totalinstaller)</onclick>
+		</control>
+		<control type="button" id="90158">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Program Add-ons</label>
+			<onclick>StartAndroidActivity(&quot;com.android.vending&quot;)</onclick>
+			<visible>System.Platform.Android</visible>
+		</control>
+		<control type="image" id="90159">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
 	<include name="HomeAddonItemsFavourites">
 		<item>
 			<label>Anime</label>
@@ -484,7 +513,7 @@
 	<include name="HomeAddonItemsMusic">
 		<item>
 			<label>31975</label>
-			<onclick>StartAndroidActivity(&quot;com.spotify.mobile.android.ui&quot;)</onclick>
+			<onclick>StartAndroidActivity(&quot;com.spotify.music&quot;)</onclick>
 			<icon>spotify.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoSpotifyButton)</visible>
@@ -542,7 +571,7 @@
 		</item>
 		<item>
 			<label>31972</label>
-			<onclick>StartAndroidActivity(&quot;com.android.email&quot;)</onclick>
+			<onclick>StartAndroidActivity(&quot;com.google.android.email&quot;)</onclick>
 			<icon>email.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoEmailButton)</visible>
