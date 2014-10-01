@@ -1,4 +1,17 @@
-20/09/2014: Fork of Confluence (Gotham) skin
+01/10/2014 [v.0.2.3]: Main public release
+
+Fixed iSearch
+Added option to choose custom icons
+Added option to choose custom backgrounds
+Added missing Android artwork
+Lowered the location of power & favourites buttons and lowered floor image
+Fixed iSearch end gfx - were in wrong location on some resolutions.
+
+Bugs:
+Upload log not working, haven't had time to add the code
+
+
+20/09/2014 [v.0.1]: Fork of Confluence (Gotham) skin
 
 Added:
 
@@ -9,6 +22,3 @@ Super Favourites added to home menu
 iSearch to home menu and rename "search" to Local Search
 New Backgrounds
 Android settings added in System
-
-Bugs:
-iSearch not working
